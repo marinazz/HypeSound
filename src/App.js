@@ -19,8 +19,8 @@ class App extends Component {
 
         <Sort/>
 
-        <Track trackName="▶ Roog - Buzzin' (Original Mix) (Simma Black)"/>
-        <Track trackName='▶ 5 Tracks To Say Goodbye: Tristen "Current"'/>
+        <Track trackName="Roog - Buzzin' (Original Mix) (Simma Black)"/>
+        <Track trackName='5 Tracks To Say Goodbye: Tristen "Current"'/>
 
       </div>
     );
