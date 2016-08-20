@@ -6,16 +6,17 @@
     <title>React App</title>
   </head>
   <body>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+<script>
+SC.initialize({
+  client_id: '1cb40d68cdbee5220da3784cb165b512',
+  redirect_uri: 'http://localhost:3000/callback.html'
+});
+
+// initiate auth popup
+
+</script>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` in this folder.
-      To create a production bundle, use `npm run build`.
-    -->
   </body>
 </html>

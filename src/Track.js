@@ -6,7 +6,7 @@ class Track extends Component {
     return (
       <div>
         <button>▶</button>
-        {this.props.trackName} 
+        {this.props.trackName}
       </div>
     )
   }

@@ -4,6 +4,10 @@ import Sort from './Sort'
 import Track from './Track'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {trackList:{collection: []}};
+  }
   render() {
     return (
       <div className="App">
@@ -22,8 +26,17 @@ class App extends Component {
         <Track trackName="Roog - Buzzin' (Original Mix) (Simma Black)"/>
         <Track trackName='5 Tracks To Say Goodbye: Tristen "Current"'/>
 
+        Clicks: {this.state.trackList.collection.map((track) => (<Track trackName={track.origin.title}/>))}
+
       </div>
     );
+  }
+  componentDidMount() {
+    SC.connect().then(() => {
+      return SC.get('/me/activities/tracks/affiliated');
+    }).then(me => {
+      this.setState({trackList: me});
+    })
   }
 }
 
