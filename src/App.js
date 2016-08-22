@@ -26,7 +26,7 @@ class App extends Component {
         <Track trackName="Roog - Buzzin' (Original Mix) (Simma Black)"/>
         <Track trackName='5 Tracks To Say Goodbye: Tristen "Current"'/>
 
-        Clicks: {this.state.trackList.collection.map((track) => (<Track trackName={track.origin.title}/>))}
+        Clicks: {this.state.trackList.collection.map((track) => (<Track trackName={track.origin.title} trackPlayUrl={track.origin.stream_url}/>))}
 
       </div>
     );
@@ -36,7 +36,7 @@ class App extends Component {
       return SC.get('/me/activities/tracks/affiliated');
     }).then(me => {
       this.setState({trackList: me});
-    })
+    });
   }
 }
 
