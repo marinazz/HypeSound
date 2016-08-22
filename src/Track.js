@@ -14,7 +14,7 @@ class Track extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.handlePlay}>▶</button>
+        <button onClick={this.handlePlay} className="Track-button">▶</button>
         {this.props.trackName}
       </div>
     );

@@ -6,6 +6,9 @@ class Sort extends Component {
     return (
       <div>
         <input type="checkbox"></input>
+        Popularity
+        <br/>
+        <input type="checkbox"></input>
         Mixtapes
       </div>
     )

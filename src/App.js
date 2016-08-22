@@ -17,17 +17,17 @@ class App extends Component {
         <p className="App-intro">
         </p>
 
-        <div>Sort by:
-        Popularity
+        <div className="App-content">
+
+          <div className="App-sort">
+          Sort by:
+          <Sort/>
+          </div>
+
+          <div className="App-sort">
+          {this.state.trackList.collection.map((track) => (<Track trackName={track.origin.title} trackPlayUrl={track.origin.stream_url}/>))}
+          </div>
         </div>
-
-        <Sort/>
-
-        <Track trackName="Roog - Buzzin' (Original Mix) (Simma Black)"/>
-        <Track trackName='5 Tracks To Say Goodbye: Tristen "Current"'/>
-
-        Clicks: {this.state.trackList.collection.map((track) => (<Track trackName={track.origin.title} trackPlayUrl={track.origin.stream_url}/>))}
-
       </div>
     );
   }
