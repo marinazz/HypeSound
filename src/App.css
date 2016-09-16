@@ -25,3 +25,8 @@
   font-family: 'PT Sans', sans-serif;
   font-size: 18px;
 }
+
+.App-imageHeader {
+  width: 55px;
+  margin-right: 10px;
+}
